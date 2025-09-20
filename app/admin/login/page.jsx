@@ -24,8 +24,32 @@ const AdminAuth = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    // Simulate API call
+    
+    // Demo authentication logic
     await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    if (isLogin) {
+      // Demo admin credentials
+      if (formData.email === 'admin@demo.com' && formData.password === 'password123') {
+        setIsLoading(false);
+        // Redirect to admin dashboard
+        window.location.href = '/admin/dashboard';
+        return;
+      } else {
+        setIsLoading(false);
+        alert('Invalid credentials! Please use:\nEmail: admin@demo.com\nPassword: password123');
+        return;
+      }
+    } else {
+      // Registration simulation
+      if (formData.email && formData.password && formData.organizationName) {
+        setIsLoading(false);
+        alert(`Account created successfully for ${formData.organizationName}!\nYou can now login with: ${formData.email}`);
+        setIsLogin(true);
+        setFormData({ email: formData.email, password: '', organizationName: '' });
+        return;
+      }
+    }
     setIsLoading(false);
   };
 

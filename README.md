@@ -2,6 +2,20 @@
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Demo Login Credentials
+
+For testing the application, use these demo credentials:
+
+**Admin Login** (`/admin/login`):
+- Email: `admin@demo.com`
+- Password: `password123`
+
+**Voter Login** (`/voter/login`):
+- Voter ID: `VOTER001`
+- PIN: `123456`
+
+For additional demo accounts, see [DEMO_CREDENTIALS.md](./DEMO_CREDENTIALS.md)
+
 ## Getting Started
 
 First, run the development server:
