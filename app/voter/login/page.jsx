@@ -22,11 +22,30 @@ const VoterLogin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    // Simulate API call for authentication
+    
+    // Demo authentication logic
     await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsLoading(false);
-    // Redirect to voter dashboard after successful login
-    console.log('Login successful:', formData);
+    
+    // Demo voter credentials
+    const demoVoters = [
+      { voterId: 'VOTER001', pin: '123456' },
+      { voterId: 'VOTER002', pin: '789012' },
+      { voterId: 'VOTER003', pin: '345678' }
+    ];
+    
+    const validVoter = demoVoters.find(
+      voter => voter.voterId === formData.voterId && voter.pin === formData.pin
+    );
+    
+    if (validVoter) {
+      setIsLoading(false);
+      console.log('Login successful:', formData);
+      // Redirect to voter dashboard
+      window.location.href = '/voter/dashboard';
+    } else {
+      setIsLoading(false);
+      alert('Invalid credentials! Please use:\nVoter ID: VOTER001\nPIN: 123456\n\nOr check DEMO_CREDENTIALS.md for more accounts');
+    }
   };
 
   const containerVariants = {

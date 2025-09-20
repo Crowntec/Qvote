@@ -1,0 +1,36 @@
+
+> next-app@0.1.0 dev
+> cross-env NODE_ENV=development next dev -H 0.0.0.0 -p 3000
+
+   ▲ Next.js 15.3.2
+   - Local:        http://localhost:3000
+   - Network:      http://0.0.0.0:3000
+
+ ✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+ ✓ Ready in 1381ms
+ ○ Compiling / ...
+ ✓ Compiled / in 5.6s (1459 modules)
+ GET / 200 in 6526ms
+ ✓ Compiled in 825ms (689 modules)
+ ○ Compiling /admin/login ...
+ ✓ Compiled /admin/login in 1109ms (1452 modules)
+ GET /admin/login 200 in 1242ms
+ ○ Compiling /admin/dashboard ...
+ ✓ Compiled /admin/dashboard in 617ms (1459 modules)
+ GET /admin/dashboard 200 in 940ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET / 200 in 90ms
+ ○ Compiling /voter/login ...
+ ✓ Compiled /voter/login in 647ms (1466 modules)
+ GET /voter/login 200 in 716ms
+ ○ Compiling /voter/dashboard ...
+ ✓ Compiled /voter/dashboard in 675ms (1473 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /voter/dashboard 200 in 881ms
+ GET /voter/login 200 in 73ms
+ ✓ Compiled in 753ms (683 modules)
